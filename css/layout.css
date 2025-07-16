@@ -1,0 +1,243 @@
+html {
+    font-size: 62.5%;
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 1.30208vw;
+    }
+}
+
+@media (max-width:540px) {
+    html {
+        font-size: 2.05185vw;
+    }
+}
+
+body {
+    font-size: 1.6rem;
+    color: #000;
+}
+
+.default {
+    padding: 12rem 0;
+}
+
+.inner {
+    max-width: 141rem;
+    margin: 0 auto;
+}
+
+.title h2 {
+    margin-bottom: 1.6rem;
+    color: #00b59b;
+    font-weight: 600;
+}
+
+.title strong {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 6.4rem;
+}
+
+.m {
+    display: none;
+}
+
+@media (max-width:768px) {
+    .title strong {
+        font-size: 4rem;
+        line-height: 4.8rem;
+    }
+}
+
+.title p {
+    font-size: 2rem;
+    color: #575757;
+}
+
+.main_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.main_btn a {
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+    line-height: 6.4rem;
+    padding: 0 3.2rem;
+    border-radius: 4rem;
+}
+
+.main_btn .normal {
+    border: 1px solid #00b59b;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.main_btn .normal:hover {
+    background: #00b59b;
+}
+
+.main_btn .color {
+    position: relative;
+    overflow: hidden;
+}
+
+.main_btn .color::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #3eb7ee 20%, #00b59b 80%);
+    border-radius: 4rem;
+    z-index: -1;
+}
+
+.main_btn .color::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #00b59b;
+    border-radius: 4rem;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.main_btn .color:hover::after {
+    opacity: 1;
+}
+
+.main_btn .color span {
+    position: relative;
+    transform: translateY(-100%);
+    transition: 0.4s;
+}
+
+.main_btn .color:hover span {
+    transform: translate(0);
+}
+
+.main_btn .color span::before {
+    content: "요금제 보기";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: 0.4s;
+}
+
+.main_btn .color:hover span::before {
+    transform: translateY(200%);
+}
+
+.main_btn .normal span {
+    position: relative;
+    color: #00b59b;
+    transform: translateY(-100%);
+    transition: 0.4s;
+}
+
+.main_btn .normal:hover span {
+    transform: translate(0);
+}
+
+.main_btn .normal span::before {
+    content: "무료로 시작하기";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: 0.4s;
+}
+
+.main_btn .normal:hover span::before {
+    transform: translateY(200%);
+}
+
+.main_btn .normal:hover span {
+    color: #fff;
+}
+
+.main_btn .color span {
+    color: #fff;
+    white-space: nowrap;
+}
+
+.nor {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background: #00b59b;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+a:hover .nor {
+    background: #fff;
+}
+
+a .col {
+    width: 4rem;
+    height: 4rem;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.nor::before {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background: url(../images/btn_move.svg) no-repeat center center/1.2rem;
+    transition: 0.4s;
+}
+
+a:hover .nor::before {
+    transform: rotate(45deg);
+    background: url(../images/btn_move_ci.svg) no-repeat center center/1.2rem;
+}
+
+a .col::before {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background: url(../images/btn_move_ci.svg) no-repeat center center/1.2rem;
+    transition: 0.4s;
+}
+
+a:hover .col::before {
+    transform: rotate(45deg);
+}
+
+.free::after {
+    content: "free";
+    margin-left: 0.8rem;
+    background: #00b59b;
+    color: #fff;
+    padding: 0.2rem 0.8rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.link {
+    position: relative;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -2.4rem;
+    transform: translate(0, -50%);
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url(../images/header_clip.svg) no-repeat center center/1.6rem;
+}
